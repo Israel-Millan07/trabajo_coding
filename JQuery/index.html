@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>contenido</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert("usted esta trabajando con jQuery");
+            $(".primero button").click(function() {
+                $(".primero h1").hide("slow");
+                $(".primero h1").show("slow");
+                $(".primero p").addClass("uno");
+            });
+            $(".segundo button").click(function() {
+                $(".segundo p,img").slideToggle();
+                $(".primero h1").toggle();
+            });
+            $(".tercero button").click(function() {
+                $(".tercero p").append(document.createTextNode("hola"));
+            });
+            $("#click").click(function() {
+                $(".nuevo").hide();
+                $(".nuevo").slideDown("slow", function() {});
+            });
+            $("span").click(function() {
+                $("div:hidden").first().fadeIn("slow");
+            });
+            $("span").click(function() {
+                $("#three").fadeOut("slow", function() {});
+            });
+            $(".primero").before($(".segundo"));
+            $("span").after($("#click"));
+            $("h1").html("hola mundo");
+            var title = $("em").attr("title");
+            $(".op7").text(title);
+            $(".boton button").click(function() {
+                var text = $(this).text();
+                $("input").val(text);
+            });
+            $("h5").text("adios");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <article class="primero">
+            <h1>AddClass</h1>
+            <button>AddClass</button>
+            <p>Click the button to add "red" to this paragraph</p>
+        </article>
+        <article class="segundo">
+            <h1>Slidetoggle</h1>
+            <button>Slidetoggle</button>
+            <p>Click the buttom to slidetoggle a hidden image </p>
+            <img hidden src="hola.png" alt="hola">
+        </article>
+        <article class="tercero">
+            <h1>Append</h1>
+            <button>Append</button>
+            <p>Click the buttom to append a new paragraph!</p>
+        </article>
+        <button id="click">click</button>
+        <div class="nuevo"></div>
+        <span>Click here</span>
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div><br>
+        <p>yo juego <em title="demaciado"> mucho </em> op7</p>
+        <h2>El título del énfasis es:</h2>
+        <div class="op7"></div>
+        <div class="boton">
+            <button>hola</button>
+            <button>¿como estás?</button>
+            <button>chao</button>
+        </div>
+        <input type="text" value="click a button">
+        <div>
+            <h5>eso es todo amigos!!</h5>
+        </div>
+    </div>
+</body>
+
+</html>

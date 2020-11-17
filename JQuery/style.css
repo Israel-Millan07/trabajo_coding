@@ -1,0 +1,117 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #container {
+        width: 70%;
+        margin-left: 25%;
+        padding-top: 3%;
+        border: 2px solid black;
+    }
+    
+    article h1 {
+        text-align: center;
+    }
+    
+    article button,
+    p {
+        display: inline-flex;
+        margin-left: 5%;
+        font-size: 13px;
+        font-family: cursive;
+    }
+    
+    article button {
+        padding: 0 1% 0 1%;
+        box-shadow: 4px 4px;
+        border: 2px solid black;
+        border-bottom: 1px solid black;
+        vertical-align: top;
+    }
+    
+    article {
+        margin-left: 5%;
+        width: 90%;
+        font-family: Arial;
+        padding-bottom: 3%;
+    }
+    
+    .primero p {
+        margin-left: 7.8%;
+    }
+    
+    .segundo img {
+        height: 10%;
+        width: 10%;
+        margin-left: 25%;
+    }
+    
+    .segundo p {
+        margin-left: 6.4%;
+    }
+    
+    .tercero p {
+        margin-left: 10%;
+    }
+    
+    .primero,
+    .segundo {
+        border-bottom: 3px solid black;
+    }
+    
+    .uno {
+        color: red;
+    }
+    
+    .nuevo {
+        width: 10%;
+        height: 9px;
+        background-color: brown;
+        border: 2px solid black;
+        display: inline-block;
+        display: none;
+    }
+    
+    span {
+        color: red;
+        cursor: pointer;
+    }
+    
+    #one,
+    #two,
+    #three {
+        margin: 3px;
+        width: 80px;
+        display: none;
+        height: 80px;
+        float: left;
+    }
+    
+    #one {
+        background: #f00;
+    }
+    
+    #two {
+        background: #0f0;
+    }
+    
+    #three {
+        background: #00f;
+    }
+    
+    .op7 {
+        color: coral;
+    }
+    
+    button {
+        margin: 4px;
+        cursor: pointer;
+    }
+    
+    h5 {
+        font-size: 44px;
+        color: #d81818;
+        text-align: center;
+        border: 1px solid;
+    }
