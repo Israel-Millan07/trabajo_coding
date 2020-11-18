@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>ninja</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".primero").click(function() {
+                $(".primero").hide("slow");
+            });
+            $(".segundo").click(function() {
+                $(".segundo").hide("slow");
+            });
+            $(".tercero").click(function() {
+                $(".tercero").hide("slow");
+            });
+            $(".cuarto").click(function() {
+                $(".cuarto").hide("slow");
+            });
+            $(".quinto").click(function() {
+                $(".quinto").hide("slow");
+            });
+            $(".sexto").click(function() {
+                $(".sexto").hide("slow");
+            });
+            $(".septimo").click(function() {
+                $(".septimo").hide("slow");
+            });
+            $(".octavo").click(function() {
+                $(".octavo").hide("slow");
+            });
+            $("button").click(function() {
+                $(".primero,.segundo,.tercero,.cuarto,.quinto,.sexto,.septimo,.octavo").show("slow");
+                $(".primero").before($(".segundo"));
+                $(".septimo").before($(".octavo"));
+                $(".tercero").before($(".quinto"));
+                $(".cuarto").before($(".sexto"));
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div class="primero">
+            <img src="ninja.png" alt="ninja">
+            <h1>1</h1>
+        </div>
+        <div class="segundo">
+            <img src="ninja.png" alt="ninja">
+            <h1>2</h1>
+        </div>
+        <div class="tercero">
+            <img src="ninja.png" alt="ninja">
+            <h1>3</h1>
+        </div>
+        <div class="cuarto">
+            <img src="ninja.png" alt="ninja">
+            <h1>4</h1>
+        </div>
+        <div class="quinto">
+            <img src="ninja.png" alt="ninja">
+            <h1>5</h1>
+        </div>
+        <div class="sexto">
+            <img src="ninja.png" alt="ninja">
+            <h1>6</h1>
+        </div>
+        <div class="septimo">
+            <img src="ninja.png" alt="ninja">
+            <h1>7</h1>
+        </div>
+        <div class="octavo">
+            <img src="ninja.png" alt="ninja">
+            <h1>8</h1>
+        </div>
+    </div>
+    <div class="boton">
+        <button>Restaurar</button>
+    </div>
+</body>
+
+</html>
