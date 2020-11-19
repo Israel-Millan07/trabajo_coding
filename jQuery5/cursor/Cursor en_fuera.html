@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursor afuera </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function() {  
+    $('img').hover(function() {
+				$(this).attr('temp', $(this).attr('src'));//
+				$(this).attr('src', $(this).attr('alt-src'));
+				$(this).attr('alt-src', $(this).attr('temp'));//
+            });
+});
+
+    </script>
+    <style>
+        body{
+            width: 1400px;
+        }
+    </style>
+</head>
+<body>
+    <img src="vector1.png" alt-src="vector2.png">
+    <img src="vector2.png" alt-src="vector3.png">
+    <img src="vector3.png" alt-src="vector5.png">
+    <img src="vector4.png" alt-src="vector6.png">
+    <img src="vector5.png" alt-src="vector7.png">
+    <img src="vector6.png" alt-src="vector8.png">
+    <img src="vector7.png" alt-src="vector1.png">
+    <img src="vector8.png" alt-src="vector4.png">
+    
+</body>
+</html>
