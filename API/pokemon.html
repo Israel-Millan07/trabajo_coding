@@ -1,51 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pokemon </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
+        $(document).ready(function() {
+            // $( "#container" ).append($(img ) );
 
-$(document).ready(function() {  
-   // $( "#container" ).append($(img ) );
-  
-    $(function () {
-        for(i=1;i<151;i++){
-            src=('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+i+'.png');
-            console.log(src);
-            var url = src;
-    // var url = 'https://avatarfiles.alphacoders.com/822/82242.png';
-        var image = new Image();
-        image.src = url;
-        document.getElementById('container').appendChild(image);
-}});
-  // do stuff
-  //Choose_My_Saved_Billing(args);
-});
-    </script>
-    <script>
-      //  src="";
-       // z="";
-       // a=[];
-       //function pokemon(){
-        //for(i=1;i<16;i++){
-       //     src=('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+i+'.png');
-        //   a.push(src);
-       //   }
-       //    return a;
-     }
-    z=pokemon();
-    console.log(z);
-        
+            $(function() {
+                for (i = 1; i < 151; i++) {
+                    src = ('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png');
+                    console.log(src);
+                    var url = src;
+                    // var url = 'https://avatarfiles.alphacoders.com/822/82242.png';
+                    var image = new Image();
+                    image.src = url;
+                    document.getElementById('container').appendChild(image);
+                }
+            });
+            // do stuff
+            //Choose_My_Saved_Billing(args);
+        });
     </script>
     <style>
-        body{
+        body {
             width: 1400px;
         }
     </style>
 </head>
+
 <body id="container">
 
 </body>
+
 </html>
