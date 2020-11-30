@@ -11,27 +11,25 @@
     <title>Pokedex</title>
     <script type="text/javascript">
         $(document).ready(function() {
-            $(function() {
-                for (i = 1; i < 151; i++) {
-                    src = ('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png');
-                    var url = src;
-                    // var url = 'https://avatarfiles.alphacoders.com/822/82242.png';
-                    var image = new Image();
-                    image.src = url;
-                    image.id = i;
-                    document.getElementById('contenedor').appendChild(image);
-                    $("img").attr("data-toggle", "modal");
-                    $("img").attr("data-target", "#exampleModal");
-                }
-                $("img").click(function() {
-                    var id = $(this).attr("id");
-                    url = "https://cors-anywhere.herokuapp.com/http://pokeapi.co/api/v2/pokemon/" + id;
-                    $.get(url, function(res) {
-                        $(".modal-title").text(" Pokemon: " + res.name);
-                        $("#recipient-name").html("Altura: " + res.height + "<br>" + "Peso: " + res.weight + "<br>" + "tipo: " + res.types[0].type.name);
-                    });
-                });
+        $(function() {
+            for (i = 1; i < 151; i++) {
+                src = ('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png');
+                var url = src;
+                var image = new Image();
+                image.src = url;
+                image.id = i;
+                document.getElementById('contenedor').appendChild(image);
+                $("img").attr("data-toggle", "modal");
+                $("img").attr("data-target", "#exampleModal");
+            }
+            $("img").click(function() {
+                var id = $(this).attr("id");
+                url = "https://cors-anywhere.herokuapp.com/http://pokeapi.co/api/v2/pokemon/" + id;
+                $(".modal-title").text(" Pokemon: " + res.name);
+                $("#recipient-name").html("Altura: " + res.height + "<br>" + "Peso: " + res.weight + "<br>" + "tipo: " + res.types[0].type.name);
             });
+        });
+        });
         });
     </script>
 </head>

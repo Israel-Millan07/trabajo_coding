@@ -8,21 +8,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            // $( "#container" ).append($(img ) );
-
             $(function() {
                 for (i = 1; i < 151; i++) {
                     src = ('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png');
                     console.log(src);
                     var url = src;
-                    // var url = 'https://avatarfiles.alphacoders.com/822/82242.png';
                     var image = new Image();
                     image.src = url;
                     document.getElementById('container').appendChild(image);
                 }
             });
-            // do stuff
-            //Choose_My_Saved_Billing(args);
         });
     </script>
     <style>
