@@ -1,0 +1,20 @@
+USE isra;
+---------------------------------------
+SHOW TABLES;
+---------------------------------------
+CREATE TABLE users (
+    id int,
+    LastName varchar(255),
+    FirstName varchar(255)
+    );
+------------------------------------------
+INSERT INTO users (id , LastName, FirstName) 
+VALUES(1, 'Millán', 'Israel');
+------------------------------------------
+SELECT * FROM users;
+-------------------------------------------
+set sql_safe_updates=0;
+---------------------------------------------------
+UPDATE users SET FirstName = 'Antonio' WHERE id=1;
+---------------------------------------------------
+DELETE FROM users WHERE id=1;
