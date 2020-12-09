@@ -1,0 +1,71 @@
+create database amigos;
+  (aqui importe la query)
+
+1.1escribe una consulta SQL que devuelva una lista de usuarios junto con los nombres de sus amigos.
+
+	SELECT users.first_name, users.last_name, user2.first_name, 
+	user2.last_name FROM users
+	LEFT JOIN friendships ON user_id = users.id
+	JOIN users as user2 ON friend_id = user2.id;
+
+2.1 Devuelva a todos los usuarios que son amigos de Kermit, asegúrese de que sus nombres se muestren en los resultados.
+	
+	SELECT  user2.first_name ,user2.last_name,users.first_name, 
+	users.last_name FROM users 
+	LEFT JOIN friendships ON user_id=users.id 
+	JOIN users as user2 ON friend_id = user2.id
+	WHERE user2.first_name='Kermit'
+
+2.2 Devuelve el recuento de todas las amistades.
+
+	SELECT user2.first_name ,user2.last_name ,COUNT(user2.id) 
+	AS cantidad FROM users 
+	LEFT JOIN friendships ON user_id=users.id 
+	JOIN users as user2 ON friend_id = user2.id
+	GROUP BY user2.id ORDER BY cantidad ASC 
+	;
+
+2.3Descubre quién tiene más amigos y devuelve el recuento de sus amigos.
+
+	SELECT users.first_name, users.last_name, COUNT(users.id) 
+	AS 'recuento' FROM users
+	LEFT JOIN friendships ON user_id = users.id
+	JOIN users as user2 ON friend_id = user2.id
+    	GROUP BY users.id order by max(users.id) limit 1;
+
+2.4Crea un nuevo usuario y hazlos amigos de Eli Byers, Kermit The Frog y Marky Mark.
+	
+	INSERT INTO amigos.users (id, first_name, last_name, created_at) 
+	VALUES (6, 'Israel', 'Millán', '2020-08-12 23:08:11');
+-----------------------------------------------------------------
+	INSERT INTO amigos . friendships (id, user_id, friend_id, created_at)
+	VALUES (7, 6, 2, '2020-08-12 23:26:05'), 
+	(8, 6, 4, '2020-08-12 23:26:05'),
+	(9, 6, 5, '2020-08-12 23:26:05');
+-------------------------------------------------------------------
+	SELECT users.first_name, users.last_name, user2.first_name, 
+	user2.last_name FROM users
+	LEFT JOIN friendships ON user_id = users.id
+	LEFT JOIN users as user2 ON friend_id = users.id
+	WHERE users.id = 6;
+
+ 2.5 Devuelve a los amigos de Eli en orden alfabético.
+
+	SELECT users.first_name, users.last_name, user2.first_name, 
+	user2.last_name FROM users
+	LEFT JOIN friendships ON user_id = users.id
+	JOIN users as user2 ON friend_id = user2.id
+    	WHERE users.first_name ='Eli' ORDER BY user2.first_name;
+
+2.6 Eliminar a Marky Mark de los amigos de Eli.
+
+	DELETE FROM friendships
+	WHERE id =5;
+
+2.7 Devuelve todas las amistades, mostrando solo el nombre y apellido de ambos amigos
+
+	SELECT  user2.first_name, 
+	user2.last_name FROM users
+	LEFT JOIN friendships ON user_id = users.id
+	JOIN users as user2 ON friend_id = user2.id
+    	WHERE users.first_name ='Eli';
