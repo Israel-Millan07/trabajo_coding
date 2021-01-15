@@ -6,6 +6,8 @@ public class ProjectTest {
 
 	public static void main(String[] args) {
 		Project pro = new Project();
+		pro.elevatorPitch();
+		System.out.println(pro.elevatorPitch());
 		pro.setNombre("Israel");
 		ArrayList <Project> nuevoProyecto = new ArrayList<Project>();
 		nuevoProyecto.add(pro);

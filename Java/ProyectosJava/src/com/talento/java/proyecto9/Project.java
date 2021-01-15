@@ -3,6 +3,9 @@ package com.talento.java.proyecto9;
 public class Project {
 String nombre;
 String descripcion;
+public String elevatorPitch() {
+	return nombre +" : "+ descripcion;
+}
 public Project() {
 }
 public Project(String nombre) {
