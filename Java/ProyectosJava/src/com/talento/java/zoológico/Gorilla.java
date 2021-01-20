@@ -2,6 +2,10 @@ package com.talento.java.zoológico;
 
 public class Gorilla extends Mammal{
 	
+	public Gorilla(Integer energyLevel) {
+		super(energyLevel);
+		super.energyLevel=100;
+	}
 	public  void throwSomething() {
 		this.energyLevel = this.energyLevel -5;
 		System.out.println("El gorila ha lanzado algo");
