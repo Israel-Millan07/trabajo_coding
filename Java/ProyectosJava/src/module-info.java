@@ -6,5 +6,6 @@
  *
  */
 module ProyectosJava {
+	requires java.desktop;
 	
 }
