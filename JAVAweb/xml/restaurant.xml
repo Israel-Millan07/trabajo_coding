@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8">
+<MenuRestaurant>
+    <item category="desayuno">
+        <name>cafe cortado</name>
+        <description>un cafe cortado con galletas.</description>
+        <price>$3500</price>
+    </item>
+   <item category="almuerzo">
+        <name>Ensalada con Pollo</name>
+        <description>Una ensalada con pollo.</description>
+        <price>$10.99</price>
+    </item>
+    <item category="almuerzo">
+        <name>Sánduche de Pollo</name>
+        <description>Un sánduche de pollo. </description>
+        <price>$12.99</price>
+    </item>
+    <item category="almuerzo">
+        <name>Sánduche de Pastrami</name>
+        <description>Un sánduche hecho con pastrami.</description>
+        <price>$13.99</price>
+    </item>
+    <item category="bebidas">
+        <name>Coca-Cola</name>
+        <description>Una gaseosa.</description>
+        <price>$0.99</price>
+    </item>
+    <item category="bebidas">
+        <name>Jugo de Naranja</name>
+        <description>Un jugo hecho con naranjas.</description>
+        <price>$0.99</price>
+    </item>    
+    <item category="cena">
+        <name>pizza</name>
+        <description>una pizza a la piedra</description>
+        <price>$10.99</price>
+    </item>
+</MenuRestaurant>

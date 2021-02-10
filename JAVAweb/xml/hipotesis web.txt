@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>--> aca se crea la etiqueta raiz
+    <display-name>SimpleServletProject</display-name>--> esta indicando que creara un proyecto en spring
+    
+    <servlet>
+        <servlet-name>simpleServlet</servlet-name>---> nombre de la clase
+        <servlet-class>org.codingdojo.tutorial.SimpleServlet</servlet-class>---> el package
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>simpleServlet</servlet-name>---> esta creando un metodo
+        <url-pattern>/simpleServlet</url-pattern>---> esta sera parte de la busqueda en el browser
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>xmlServlet</servlet-name>---> nueva clase
+        <servlet-class>or.codingdojo.tutorial.XmlServlet</servlet-class>---> nuevo package
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>xmlServlet</servlet-name>---> nuevo metodo
+        <url-pattern>/xmlServletpath</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+    <welcome-file>index.html</welcome-file>---> aca tenemos nuestrp jsp
+    </welcome-file-list>
+</web-app>
