@@ -11,5 +11,9 @@
 
 <body>
 <c:out value="${username}"></c:out>
+<c:out value="${location}"></c:out>
+<c:out value="${lenguaje}"></c:out>
+<c:out value="${descripcion}"></c:out>
+<form action="/">  <input type ="submit" value= "Go Back"/></form>
 </body>
 </html>
